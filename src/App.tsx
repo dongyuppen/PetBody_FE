@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate, Link, useLocation } from 'react
 import { Home, Sparkles, QrCode } from 'lucide-react';
 import AiResult from './pages/AiResult/AiResult';
 import Dashboard from './pages/Dashboard/Dashboard';
+import QrExport from './pages/QrExport/QrExport';
 
 // 모바일 하단 네비게이션 컴포넌트
 function BottomNav() {
@@ -47,7 +48,7 @@ function App() {
             <Route path="/" element={<Navigate to="/dashboard" replace />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/ai-hook" element={<AiResult />} />
-            {/* <Route path="/export" element={<QrExport />} /> */}
+            {<Route path="/export" element={<QrExport />} />}
           </Routes>
         </div>
 
