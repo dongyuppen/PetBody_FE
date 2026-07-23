@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900 font-sans antialiased;
+    /* 모바일 뷰포트 최적화 */
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* 모바일 앱 화면처럼 중앙 정렬 및 최대 너비 제한 (선택 사항) */
+#root {
+  @apply max-w-md mx-auto min-h-screen bg-white shadow-xl relative;
+}
