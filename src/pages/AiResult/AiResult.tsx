@@ -1,4 +1,3 @@
-// src/pages/AiResult/AiResult.tsx
 import { useState } from 'react';
 import { Loader2, Share2, RotateCcw, Activity } from 'lucide-react';
 import { api } from '../../api/axios';
@@ -57,7 +56,8 @@ export default function AiResult() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen p-6 bg-white">
+    // ✨ pb-28 속성을 추가하여 하단 바에 버튼이 가려지지 않도록 여백을 확보했습니다.
+    <div className="flex flex-col min-h-screen p-6 pb-28 bg-white">
       {/* 1. 입력 화면 */}
       {step === 'INPUT' && (
         <div className="flex flex-col flex-grow animate-fade-in">
@@ -151,7 +151,8 @@ export default function AiResult() {
             </div>
           </div>
 
-          <div className="flex space-x-3 mt-8 mt-auto">
+          {/* ✨ mt-8 mt-auto 중복을 제거하고 레이아웃을 깔끔하게 하나로 정리했습니다. */}
+          <div className="flex space-x-3 mt-auto pt-8">
             <button
               onClick={() => setStep('INPUT')}
               className="flex-1 flex items-center justify-center space-x-2 bg-gray-100 text-gray-700 font-semibold py-4 rounded-xl hover:bg-gray-200 transition-colors"
