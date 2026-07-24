@@ -4,6 +4,8 @@ import { Home, Sparkles, QrCode } from 'lucide-react';
 import AiResult from './pages/AiResult/AiResult';
 import Dashboard from './pages/Dashboard/Dashboard';
 import QrExport from './pages/QrExport/QrExport';
+import Login from './pages/Login/Login';
+import KakaoCallback from './pages/Login/KakaoCallback';
 
 // 모바일 하단 네비게이션 컴포넌트
 function BottomNav() {
@@ -49,6 +51,9 @@ function App() {
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/ai-hook" element={<AiResult />} />
             {<Route path="/export" element={<QrExport />} />}
+            {/* 로그인 관련 라우트 */}
+            <Route path="/login" element={<Login />} />
+            <Route path="/oauth/callback/kakao" element={<KakaoCallback />} />
           </Routes>
         </div>
 
